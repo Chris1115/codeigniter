@@ -30,4 +30,39 @@
         
             $this->db->insert('forum_chat', $data);
         }
+
+        public function addNewForum()
+        {
+            $data = array(
+                'forum_id' => $this->input->post('forum_id', TRUE),
+                'headline' => $this->input->post('headline', TRUE),
+                'question' => $this->input->post('question', TRUE)
+            );
+
+            $this->db->insert('forum', $data);
+        }
+
+        public function updateForum($id)
+        {
+            $data = array(
+                'forum_id' => $id,
+                'headline' => $this->input->post('headline', TRUE),
+                'question' => $this->input->post('question', TRUE)
+            );
+        
+            $this->db->where('forum_id', $id);
+            $this->db->update('forum', $data);
+        }
+
+        public function deleteForumId($id)
+        {
+            $this->db->where('forum_id', $id);
+            $this->db->delete('forum_chat');
+
+            $this->db->delete('forum', array('forum_id' => $id));
+
+            // Produces:
+            // DELETE FROM mytable
+            // WHERE id = $id
+        }
     }

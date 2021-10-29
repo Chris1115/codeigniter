@@ -32,7 +32,7 @@
                    <h2 class="tracking-widest text-xs title-font font-medium text-white hover:text-green-500  mb-1">Front-end</h2>
                    <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">JAVASCRIPT</h1>
                    <p class="leading-relaxed mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quidem vero aliquam laborum accusamus illum. Molestias deserunt ad, facere saepe quod pariatur dolo.</p>
-                   <a class="text-green-700 hover:text-green-900  inline-flex items-center font-medium" href="exercises/js.html">Show More
+                   <a class="text-green-700 hover:text-green-900  inline-flex items-center font-medium" href="<?=base_url('exercise/js')?>">Show More
                      <svg class="w-4 h-4 ml-2 animate-ping" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                        <path d="M5 12h14"></path>
                        <path d="M12 5l7 7-7 7"></path>
@@ -111,7 +111,7 @@
                      <h2 class="tracking-widest text-xs title-font font-medium text-white hover:text-green-500  mb-1">Back-end</h2>
                      <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">ANGULAR</h1>
                      <p class="leading-relaxed mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quidem vero aliquam laborum accusamus illum. Molestias deserunt ad, facere saepe quod pariatur dolo.</p>
-                     <a class="text-green-700 hover:text-green-900  inline-flex items-center font-medium" href="exercises\angular.html">Show More
+                     <a class="text-green-700 hover:text-green-900  inline-flex items-center font-medium" href="#">Show More
                        <svg class="w-4 h-4 ml-2 animate-ping" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                          <path d="M5 12h14"></path>
                          <path d="M12 5l7 7-7 7"></path>

@@ -163,7 +163,7 @@
                 </div>
               </div>
             </div>
-            <button class="flex mx-auto mt-16 text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Button</button>
+            <button class="flex mx-auto mt-16 text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg"><a href="<?=base_url('auth/register')?>">REGISTER NOW</a></button>
           </div>
         </section>
 
@@ -489,7 +489,7 @@
           <div class="container px-5 py-24 mx-auto">
             <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
               <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ea impedit illo dolorem..</h1>
-             <button class="flex-shrink-0 text-white bg-green-700 border-0 py-2 px-8 focus:outline-none transition duration-500 ease-linear hover:bg-green-900 rounded text-lg mt-10 sm:mt-0"><a href="contact.html">Contact Us</a></button>
+             <button class="flex-shrink-0 text-white bg-green-700 border-0 py-2 px-8 focus:outline-none transition duration-500 ease-linear hover:bg-green-900 rounded text-lg mt-10 sm:mt-0"><a href="<?=base_url('about/contact')?>">Contact Us</a></button>
             </div>
           </div>
         </section>

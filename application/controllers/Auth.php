@@ -38,26 +38,32 @@
 
             if($user)
             {
-
-                if($password == $user['password'])
+                if ($user['is_active'] == 1)
                 {
-                    $data = $this->db->get_where('identity', ['id' => $user['id']])->row_array();
-                    
-                    if ($data['role'] == 'staff')
+                    if($password == $user['password'])
                     {
-                        redirect('admin');
+                        $data = $this->db->get_where('identity', ['id' => $user['id']])->row_array();
+                        
+
+                        if ($data['role'] == 'staff')
+                        {
+                            redirect('admin');
+                        }
+                        else
+                        {
+                            $this->session->set_userdata($data);
+                            redirect('user');
+                        }
                     }
                     else
                     {
-                        $this->session->set_userdata($user);
-                        redirect('user');
+                        echo 'password salah';
                     }
                 }
                 else
                 {
-                    echo 'password salah';
+                    echo 'akun belum aktif';
                 }
-
             }
             else
             {
@@ -94,8 +100,6 @@
         public function logout()
         {
             $this->session->unset_userdata('id');
-            $this->session->unset_userdata('username');
-            $this->session->unset_userdata('password');
             redirect('auth');
         }
     }

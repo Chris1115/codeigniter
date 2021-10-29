@@ -50,6 +50,57 @@
             </ul>
         </div>
       </div>
+
+      <div class="container bg-indigo-400">
+      <?=var_dump($transaction)?>
+      </div>
+
+      <br><br><br>
+
+      <h1 class="text-center">Class Available</h1>
+      <div class="container bg-purple-500 grid grid-cols-5 p-10">
+      
+        <?php foreach($course as $crs):?>
+          <div course="container bg-indigo-300 hover:bg-blue-100 text-center items-center py-4">
+            <p><?=$crs['course_name'];?></p>
+            <p><?=$crs['status'];?></p>
+            <br><br>
+            <a href="<?= base_url('classes/register')?>/<?=$crs['id'];?>" class="hover:text-white">REGISTER</a>
+          </div>
+        <?php endforeach;?>
+      </div>
+
+      <br><br><br>
+
+
+      <h1 class="text-center">Registered Class</h1>
+      <div class="container bg-purple-500 grid grid-cols-5 p-10">
+
+        <?php foreach($registered as $rgs):?>
+          <div course="container bg-indigo-300 hover:bg-blue-100 text-center items-center py-4">
+            <p><?=$rgs['course_id'];?></p>
+            <p><?=$rgs['class_id'];?></p>
+            <p><?=$rgs['participant_id'];?></p>
+          </div>
+        <?php endforeach;?>
+      </div>
+
+      <br><br><br>
+
+
+      <h1 class="text-center">Item Inventory</h1>
+      <div class="container bg-purple-500 grid grid-cols-5 p-10">
+
+        <?php foreach($inventory as $inv):?>
+          <div course="container bg-indigo-300 hover:bg-blue-100 text-center items-center py-4">
+            <p><?=$inv['user_id'];?></p>
+            <p><?=$inv['item_id'];?></p>
+            <p><?=$inv['quantity'];?></p>
+          </div>
+        <?php endforeach;?>
+      </div>
+
+
     </div>
   </div>
 </div>

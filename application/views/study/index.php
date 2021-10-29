@@ -11,7 +11,7 @@
             <div class="flex flex-wrap -m-4">
               <div class="xl:w-1/5 md:w-1/2 p-4">
                 <div class="bg-gray-100 p-6 rounded-lg">
-                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="../assets/html.png" alt="content">
+                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="<?=base_url()?>assets/html.png" alt="content">
                   <!-- The Modal -->
                   <div id="myModal" class="modal">
                     <span class="close">&times;</span>
@@ -21,13 +21,13 @@
       
                   <h3 class="tracking-widest text-green-500 text-xs font-medium title-font">
                     <div id="divlink" class="fa"></div>
-                    <a href="../materials/html_m.html">HTML</a></h3>
+                    <a href="<?=base_url('study/html')?>">HTML</a></h3>
                   <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Lorem ipsum dolor </h2>
                 </div>
               </div>
               <div class="xl:w-1/5 md:w-1/2 p-4">
                 <div class="bg-gray-100 p-6 rounded-lg">    
-                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="../assets/css.png"  alt="content">
+                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="<?=base_url()?>assets/css.png"  alt="content">
                   <!-- The Modal -->
                   <div id="myModal" class="modal">
                     <span class="close">&times;</span>
@@ -35,13 +35,13 @@
                     <div id="caption"></div>
                   </div>
       
-                  <h3 class="tracking-widest text-green-500 text-xs font-medium title-font"><a href="../materials/css_m.html">CSS</a></h3>
+                  <h3 class="tracking-widest text-green-500 text-xs font-medium title-font"><a href="<?=base_url('study/css')?>">CSS</a></h3>
                   <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Lorem ipsum dolor</h2>
                 </div>
               </div>
               <div class="xl:w-1/5 md:w-1/2 p-4">
                 <div class="bg-gray-100 p-6 rounded-lg">  
-                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="../assets/JS.png"  alt="content">
+                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="<?=base_url()?>assets/JS.png"  alt="content">
                   <!-- The Modal -->
                   <div id="myModal" class="modal">
                     <span class="close">&times;</span>
@@ -49,13 +49,13 @@
                     <div id="caption"></div>
                   </div>
       
-                  <h3 class="tracking-widest text-green-500 text-xs font-medium title-font"><a href="../materials/js_m.html">JAVASCRIPT</a></h3>
+                  <h3 class="tracking-widest text-green-500 text-xs font-medium title-font"><a href="<?=base_url('study/js')?>">JAVASCRIPT</a></h3>
                   <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Lorem ipsum dolor </h2>
                 </div>
               </div>
               <div class="xl:w-1/5 md:w-1/2 p-4">
                 <div class="bg-gray-100 p-6 rounded-lg">  
-                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="../assets/php.png"  alt="content">
+                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="<?=base_url()?>assets/php.png"  alt="content">
                   <!-- The Modal -->
                   <div id="myModal" class="modal">
                     <span class="close">&times;</span>
@@ -70,7 +70,7 @@
 
               <div class="xl:w-1/5 md:w-1/2 p-4">
                 <div class="bg-gray-100 p-6 rounded-lg">
-                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="../assets/bootstrap.png" alt="content">
+                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="<?=base_url()?>assets/bootstrap.png" alt="content">
                   <!-- The Modal -->
                   <div id="myModal" class="modal">
                     <span class="close">&times;</span>
@@ -85,7 +85,7 @@
 
               <div class="xl:w-1/5 md:w-1/2 p-4">
                 <div class="bg-gray-100 p-6 rounded-lg">
-                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="../assets/mysql.png"  alt="content">
+                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="<?=base_url()?>assets/mysql.png"  alt="content">
                   <!-- The Modal -->
                   <div id="myModal" class="modal">
                     <span class="close">&times;</span>
@@ -99,7 +99,7 @@
               </div>
               <div class="xl:w-1/5 md:w-1/2 p-4">
                 <div class="bg-gray-100 p-6 rounded-lg">
-                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="../assets/react.png" alt="content">
+                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="<?=base_url()?>assets/react.png" alt="content">
                   <!-- The Modal -->
                   <div id="myModal" class="modal">
                     <span class="close">&times;</span>
@@ -113,7 +113,7 @@
               </div>
               <div class="xl:w-1/5 md:w-1/2 p-4">
                 <div class="bg-gray-100 p-6 rounded-lg">
-                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="../assets/Angular.png"  alt="content">
+                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="<?=base_url()?>assets/Angular.png"  alt="content">
                   <!-- The Modal -->
                   <div id="myModal" class="modal">
                     <span class="close">&times;</span>
@@ -127,7 +127,7 @@
               </div>
               <div class="xl:w-1/5 md:w-1/2 p-4">
                 <div class="bg-gray-100 p-6 rounded-lg">
-                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="../assets/sass.png"  alt="content">
+                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="<?=base_url()?>assets/sass.png"  alt="content">
                   <!-- The Modal -->
                   <div id="myModal" class="modal">
                     <span class="close">&times;</span>
@@ -141,7 +141,7 @@
               </div>
               <div class="xl:w-1/5 md:w-1/2 p-4">
                 <div class="bg-gray-100 p-6 rounded-lg">
-                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="../assets/ruby.png"  alt="content">
+                  <img id="myImg" class="h-40 rounded w-full object-cover object-center mb-6 MyImg" src="<?=base_url()?>assets/ruby.png"  alt="content">
                   <!-- The Modal -->
                   <div id="myModal" class="modal">
                     <span class="close">&times;</span>

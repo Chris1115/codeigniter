@@ -22,12 +22,13 @@
           </a>
 
           <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-          <a class="mr-7 transition duration-400 ease-out btnn" href="<?=base_url('home/index')?>">Home</a>
+          <a class="mr-7 transition duration-400 ease-out btnn" href="<?=base_url('user')?>">Home</a>
             <a class="mr-7 transition duration-400 ease-out btnn" href="<?=base_url('study/index')?>">Study</a>
             <a class="mr-7 transition duration-400 ease-out btnn" href="<?=base_url('exercise/index')?>">Exercises</a>
             <a class="mr-7 transition duration-400 ease-out btnn" href="<?=base_url('roadmap/index')?>">Road Map</a>
             <a class="mr-7 transition duration-400 ease-out btnn" href="<?=base_url('about/index')?>">About</a>
             <a class="mr-7 transition duration-400 ease-out btnn" href="<?=base_url('user/forum')?>">Forum</a>
+            <a class="mr-7 transition duration-400 ease-out btnn" href="<?=base_url('shop/index')?>">Shop</a>
           </nav>
 
           <button class="inline-flex items-center bg-green-500  border-0 py-1 px-3 focus:outline-none text-white hover:bg-green-600 rounded text-base mt-4 md:mt-0 transition duration-500 ease-out"><a href="<?=base_url('auth/logout')?>">LOGOUT</a>

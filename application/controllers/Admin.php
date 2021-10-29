@@ -6,8 +6,10 @@
             parent::__construct();
             $this->load->model('Identity_model');
             $this->load->model('Account_model');
+            $this->load->model('Forum_model');
+            $this->load->model('Class_model');
             $this->load->library('form_validation');
-            $this->secure();
+            // $this->secure();
         }
 
         public function index()
@@ -15,6 +17,8 @@
             $data ['judul'] = 'Admin';  
             $data ['akun'] = $this->Identity_model->getAllIdDetails();
             $data ['akunAkses'] = $this->Account_model->getAllAccount();
+            $data ['forum'] = $this->Forum_model->getAllForum();
+            $data ['course'] = $this->Class_model->getAllCourse();
 
             if ( $this->input->post('keyword') )
             {
@@ -26,13 +30,16 @@
             $this->load->view('templates/user/footer');
         }
 
+
+        // Settingan akun
+
         public function hapus($id)
         {
             $this->Identity_model->deleteId($id);
             $this->session->set_flashdata('flash', 'dihapus');
             redirect('admin');
         }
-
+ 
         public function detail($id)
         {
             $data ['judul'] = 'Details';  
@@ -48,7 +55,6 @@
             $data ['judul'] = 'Ubah';
             $data ['akun'] = $this->Identity_model->getAccById($id);
             
-            $this->form_validation->set_rules('id', 'id', 'required|exact_length[10]');
             $this->form_validation->set_rules('nickname', 'nickname', 'required');
             $this->form_validation->set_rules('role', 'role', 'required');
 
@@ -60,13 +66,124 @@
             }
             else
             {
-                $this->Identity_model->updateAcc();
+                $this->Identity_model->updateAcc($id);
                 $this->session->set_flashdata('flash', 'diubah');
                 redirect('admin');
 
                 echo "berhasil";
             }
         }
+
+
+
+
+        // Settingan Forum
+
+        public function newForum()
+        {
+            $data ['judul'] = 'Add New Forum'; 
+
+            $this->form_validation->set_rules('forum_id', 'Forum ID', 'required|exact_length[8]|is_unique[forum.forum_id]');
+            $this->form_validation->set_rules('headline', 'Headline', 'required');
+            $this->form_validation->set_rules('question', 'Question', 'required');
+
+            if ($this->form_validation->run() == FALSE)
+            {
+                $this->load->view('templates/public/header', $data);
+                $this->load->view('admin/addForum');
+                $this->load->view('templates/public/footer');
+            }
+            else
+            {
+                $this->Forum_model->addNewForum();
+                $this->session->set_flashdata('flash', 'ditambahkan');
+                redirect('admin');
+            }
+        }
+
+        public function gantiForum($id)
+        {
+            $data ['judul'] = 'Chane forum details';
+            $data ['detail'] = $this->Forum_model->getForumInfo($id);
+
+            $this->form_validation->set_rules('headline', 'Headline', 'required');
+            $this->form_validation->set_rules('question', 'Question', 'required');
+
+            if ($this->form_validation->run() == FALSE)
+            {
+                $this->load->view('templates/public/header', $data);
+                $this->load->view('admin/changeForum', $data);
+                $this->load->view('templates/public/footer');
+            }
+            else
+            {
+                $this->Forum_model->updateForum($id);
+                $this->session->set_flashdata('flash', 'ditambahkan');
+                redirect('admin');
+            }
+        }
+
+        public function hapusForum($forum_id)
+        {
+            $this->Forum_model->deleteForumId($forum_id);
+            $this->session->set_flashdata('flash', 'dihapus');
+            redirect('admin');
+        }
+
+        // Settingan Forum
+
+        public function newCourse()
+        {
+            $data ['judul'] = 'Add New Forum'; 
+
+            $this->form_validation->set_rules('id', ' Course ID', 'required|exact_length[5]|is_unique[course.id]');
+            $this->form_validation->set_rules('course_name', 'Course Name', 'required');
+            $this->form_validation->set_rules('status', 'Status', 'required');
+
+            if ($this->form_validation->run() == FALSE)
+            {
+                $this->load->view('templates/public/header', $data);
+                $this->load->view('admin/addCourse');
+                $this->load->view('templates/public/footer');
+            }
+            else
+            {
+                $this->Class_model->addNewCourse();
+                $this->session->set_flashdata('flash', 'ditambahkan');
+                redirect('admin');
+            }
+        }
+
+        public function gantiCourse($id)
+        {
+            $data ['judul'] = 'Change Course details';
+            $data ['detail'] = $this->Class_model->getCourseByID($id);
+
+            $this->form_validation->set_rules('course_name', 'Course Name', 'required');
+            $this->form_validation->set_rules('status', 'Status', 'required');
+
+            if ($this->form_validation->run() == FALSE)
+            {
+                $this->load->view('templates/public/header', $data);
+                $this->load->view('admin/changeCourse', $data);
+                $this->load->view('templates/public/footer');
+            }
+            else
+            {
+                $this->Class_model->updateCourse($id);
+                $this->session->set_flashdata('flash', 'ditambahkan');
+                redirect('admin');
+            }
+        }
+
+        public function hapusCourse($id)
+        {
+            $this->Class_model->deleteCourseId($id);
+            $this->session->set_flashdata('flash', 'dihapus');
+            redirect('admin');
+        }
+
+
 
         private function secure()
         {

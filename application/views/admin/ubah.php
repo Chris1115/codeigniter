@@ -7,11 +7,11 @@
                 <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever Lorem ipsum dolor sit, amet consectetur adipisicini, sit error. Non illo ipsa cumque.</p>
             </div>
 
-            <div class="container grid grid-cols-2 gap-x-2">
+            <div class="container grid grid-cols-2 gap-x-2 gap-y-4">
 
                 <div class="container flex flex-col">
                     <label for="id"><b>Input ID</b></label>
-                    <input type="text" placeholder="id 10 character" name="id" id="id" class="rounded" value="<?=$akun['id']?>">
+                    <label for="id"><b><?=$akun['id']?></b></label>
                 </div>
 
                 <div class="container flex flex-col">
